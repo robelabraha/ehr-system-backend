@@ -1,36 +1,36 @@
 package com.ehr.patient;
 
 import org.springframework.web.bind.annotation.*;
-import java.util.*;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/patients")
 public class PatientController {
 
-    private List<Patient> patients = new ArrayList<>();
+    private final PatientService service;
+
+    public PatientController(PatientService service) {
+        this.service = service;
+    }
 
     @GetMapping
     public List<Patient> getPatients() {
-        return patients;
+        return service.getAllPatients();
     }
 
     @GetMapping("/{id}")
     public Patient getPatientById(@PathVariable Long id) {
-        return patients.stream()
-                       .filter(p -> p.getId().equals(id))
-                       .findFirst()
-                       .orElseThrow(() -> new RuntimeException("Patient not found"));
+        return service.getPatientById(id);
     }
 
     @PostMapping
     public Patient createPatient(@RequestBody Patient patient) {
-        patients.add(patient);
-        return patient;
+        return service.createPatient(patient);
     }
 
     @DeleteMapping("/{id}")
     public String deletePatient(@PathVariable Long id) {
-        patients.removeIf(p -> p.getId().equals(id));
+        service.deletePatient(id);
         return "Deleted patient with id: " + id;
     }
 }
