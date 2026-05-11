@@ -1,14 +1,22 @@
 package com.ehr.patient;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Patient {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
     private String email;
 
     public Patient() {}
 
-    public Patient(Long id, String name, String email) {
-        this.id = id;
+    public Patient(String name, String email) {
         this.name = name;
         this.email = email;
     }
