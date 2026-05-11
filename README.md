@@ -45,35 +45,14 @@ cd ehr-system-backend
 docker-compose up --build
 ``
 
+## 🔄 Workflow
+- Client sends request (e.g., POST /api/patients).
+- Controller validates input (@Valid).
+- Service applies business logic.
+- Repository persists data with JPA.
+- Database stores patient records.
+- GlobalExceptionHandler returns clean JSON errors if something fails.
 
-🧩 Architecture Diagram
-mermaid
-flowchart LR
-    Client[👩‍💻 Client] --> Controller[📦 PatientController]
-    Controller --> Service[⚙️ PatientService]
-    Service --> Repository[🗄️ PatientRepository]
-    Repository --> DB[(💾 MySQL Database)]
-🔄 Workflow
-Client sends request (e.g., POST /api/patients).
-
-Controller validates input (@Valid).
-
-Service applies business logic.
-
-Repository persists data with JPA.
-
-Database stores patient records.
-
-GlobalExceptionHandler returns clean JSON errors if something fails.
-
-🛡️ Error Handling Example
-json
-{
-  "timestamp": "2026-05-11T06:20:00",
-  "status": 404,
-  "error": "Not Found",
-  "message": "Patient not found"
-}
 ## 🏗️ Box‑Style Architecture Diagram
 +----------------------+
 |     Client Requests  |
