@@ -43,7 +43,7 @@ cd ehr-system-backend
 
 # Build and run with Docker Compose
 docker-compose up --build
-
+``
 ## 🧩 Error Handling Example
 ```json
 {
@@ -53,7 +53,7 @@ docker-compose up --build
   "message": "Patient not found"
 }
 
-
+```
 
 🧩 Architecture Diagram
 mermaid
