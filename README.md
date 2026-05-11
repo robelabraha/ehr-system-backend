@@ -10,9 +10,12 @@ HIPAA‑compliant Electronic Health Record (EHR) backend built with Java, Spring
 
 ## 🚀 Features
 - RESTful APIs for patient records and appointments
-- MySQL integration
-- Swagger/OpenAPI documentation
+- MySQL integration with JPA/Hibernate persistence
+- Validation using @NotBlank, @Email, and @Valid for clean input handling
+- Global Exception Handling with structured JSON error responses
+- Swagger/OpenAPI documentation for interactive API exploration
 - Unit testing with JUnit and Mockito
+- Docker Compose setup for one‑command deployment of app + database
 
 ## 📂 Repository Structure
 ```text
