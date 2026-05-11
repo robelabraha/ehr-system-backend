@@ -1,11 +1,12 @@
-# EHR System Backend
-🏥 EHR System Backend
-https://img.shields.io/badge/Java-17-blue  
-https://img.shields.io/badge/SpringBoot-3.0-green  
-https://img.shields.io/badge/Docker-Compose-orange  
-https://img.shields.io/badge/MySQL-8.0-lightblue
+# 🏥 EHR System Backend
 
-HIPAA-compliant Electronic Health Record (EHR) backend built with Java, Spring Boot, and microservices architecture. Demonstrates secure patient data management, scalable API design, and cloud-ready deployment. Includes REST endpoints, database integration, and monitoring tools to showcase enterprise-grade healthcare application development.
+![Java](https://img.shields.io/badge/Java-17-blue)
+![Spring Boot](https://img.shields.io/badge/SpringBoot-3.0-green)
+![Docker Compose](https://img.shields.io/badge/Docker-Compose-orange)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-lightblue)
+
+HIPAA‑compliant Electronic Health Record (EHR) backend built with Java, Spring Boot, and microservices architecture. Demonstrates secure patient data management, scalable API design, and cloud‑ready deployment.
+
 
 ## 🚀 Features
 - RESTful APIs for patient records and appointments
