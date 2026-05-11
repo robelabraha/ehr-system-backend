@@ -44,16 +44,7 @@ cd ehr-system-backend
 # Build and run with Docker Compose
 docker-compose up --build
 ``
-## 🧩 Error Handling Example
-```json
-{
-  "timestamp": "2026-05-11T06:20:00",
-  "status": 404,
-  "error": "Not Found",
-  "message": "Patient not found"
-}
 
-```
 
 🧩 Architecture Diagram
 mermaid
