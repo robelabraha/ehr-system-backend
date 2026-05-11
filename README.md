@@ -47,7 +47,7 @@ cd ehr-system-backend
 
 # Build and run with Docker Compose
 docker-compose up --build
-```
+---
 
 ## 🔄 Workflow
 - Client sends request (e.g., POST /api/patients).
